@@ -1,0 +1,183 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+
+$font: "Inter";
+$bg_color_1: #222831;
+$border_color: #31363f;
+$font_color: #f8fafc;
+$border_color_green: #22d3ee;
+$border_color_yellow: #eab308;
+$border_color_red: #f43f5e;
+$bg_color_2: #31363f;
+body {
+  background-color: $bg_color_1;
+  font-family: $font;
+  padding: 1rem;
+  margin: 0;
+  color: $font_color;
+  main {
+    .commit_link {
+      color: white;
+      font-size: 15px;
+      margin-left: 1rem;
+    }
+    .labels {
+      display: flex;
+      gap: 0rem;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.5rem;
+      span {
+        width: 7rem;
+        font-size: 18px;
+      }
+      .last_updated {
+        font-size: 15px;
+        width: 10rem;
+      }
+    }
+    .container {
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      gap: 0rem;
+      .Date {
+        box-shadow: none;
+        display: none;
+      }
+      tr {
+        transition: 250ms linear all;
+        margin: 0.5rem;
+        position: relative;
+        padding: 1rem 1.5rem;
+        font-size: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: $bg_color_2;
+        box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+        border-radius: 5px;
+        gap: 0.25rem;
+        .input {
+          width: 7rem;
+          background-color: $bg_color_1;
+          border: 1px solid $border_color;
+          outline: none;
+          font-family: $font;
+          height: 1.5rem;
+          border-radius: 8px;
+          padding-left: 0.5rem;
+          margin-right: 1rem;
+          color: white;
+        }
+        td {
+          width: 7rem;
+          position: relative;
+        }
+        a {
+          width: 4.5rem;
+          color: $font_color;
+        }
+        span {
+          width: 5rem;
+        }
+        .cost,
+        .pay,
+        .link,
+        .company {
+          background-color: transparent;
+          color: $font_color;
+          font-family: $font;
+          border: none;
+          outline: none;
+          font-size: 15px;
+          position: absolute;
+        }
+        .company {
+          margin-left: -2rem;
+          margin-right: 1rem;
+        }
+      }
+      .status_active {
+        color: $border_color_green;
+      }
+      .status_oos {
+        color: $border_color_yellow;
+      }
+      .status_inactive {
+        color: $border_color_red;
+      }
+      .tool_tip_container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transition: 250ms linear ease-in-out all;
+        .tool_tip {
+          font-size: 13px;
+          background: $bg_color_1;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: $font_color;
+          margin: 1rem;
+          padding: 0.5rem;
+          border-radius: 10px;
+          margin-bottom: 1rem;
+          position: absolute;
+          width: 3rem;
+          bottom: 0.25rem;
+          opacity: 0;
+          transition: opacity 250ms linear ease-in-out;
+        }
+        .tool_tip.show {
+          opacity: 1;
+          visibility: visible;
+          transform: translateY(0); // Move to the final position
+        }
+      }
+    }
+  }
+}
+// extra modes
+.not_committed {
+  border: 2px solid $border_color;
+}
+.yes_committed {
+  border: 2px solid $border_color_green;
+}
+
+.hidden {
+  display: none;
+  transition: 250ms linear ease-in-out;
+}
+
+.refresh_btn,
+.sort_btn {
+  background-color: $bg_color_1;
+  border: 1px solid #f8fafc;
+  font-family: $font;
+  height: 2rem;
+  width: 5rem;
+  margin-left: 0.5rem;
+  color: #f8fafc;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.sort_btn {
+  width: 3rem;
+}
+span {
+  transition: 250ms linear ease-in-out;
+}
+.counter_commitments {
+  margin-left: 1rem;
+  font-size: 15px;
+  color: $border_color_yellow;
+}
+
+.outcome {
+  width: 3rem;
+  margin-right: -4rem;
+}

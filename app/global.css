@@ -1,0 +1,175 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+body {
+  background-color: #222831;
+  font-family: "Inter";
+  padding: 1rem;
+  margin: 0;
+  color: #f8fafc;
+}
+body main .commit_link {
+  color: white;
+  font-size: 15px;
+  margin-left: 1rem;
+}
+body main .labels {
+  display: flex;
+  gap: 0rem;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem;
+}
+body main .labels span {
+  width: 7rem;
+  font-size: 18px;
+}
+body main .labels .last_updated {
+  font-size: 15px;
+  width: 10rem;
+}
+body main .container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  gap: 0rem;
+}
+body main .container .Date {
+  box-shadow: none;
+  display: none;
+}
+body main .container tr {
+  transition: 250ms linear all;
+  margin: 0.5rem;
+  position: relative;
+  padding: 1rem 1.5rem;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #31363f;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  border-radius: 5px;
+  gap: 0.25rem;
+}
+body main .container tr .input {
+  width: 7rem;
+  background-color: #222831;
+  border: 1px solid #31363f;
+  outline: none;
+  font-family: "Inter";
+  height: 1.5rem;
+  border-radius: 8px;
+  padding-left: 0.5rem;
+  margin-right: 1rem;
+  color: white;
+}
+body main .container tr td {
+  width: 7rem;
+  position: relative;
+}
+body main .container tr a {
+  width: 4.5rem;
+  color: #f8fafc;
+}
+body main .container tr span {
+  width: 5rem;
+}
+body main .container tr .cost,
+body main .container tr .pay,
+body main .container tr .link,
+body main .container tr .company {
+  background-color: transparent;
+  color: #f8fafc;
+  font-family: "Inter";
+  border: none;
+  outline: none;
+  font-size: 15px;
+  position: absolute;
+}
+body main .container tr .company {
+  margin-left: -2rem;
+  margin-right: 1rem;
+}
+body main .container .status_active {
+  color: #22d3ee;
+}
+body main .container .status_oos {
+  color: #eab308;
+}
+body main .container .status_inactive {
+  color: #f43f5e;
+}
+body main .container .tool_tip_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: 250ms linear ease-in-out all;
+}
+body main .container .tool_tip_container .tool_tip {
+  font-size: 13px;
+  background: #222831;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #f8fafc;
+  margin: 1rem;
+  padding: 0.5rem;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  position: absolute;
+  width: 3rem;
+  bottom: 0.25rem;
+  opacity: 0;
+  transition: opacity 250ms linear ease-in-out;
+}
+body main .container .tool_tip_container .tool_tip.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.not_committed {
+  border: 2px solid #31363f;
+}
+
+.yes_committed {
+  border: 2px solid #22d3ee;
+}
+
+.hidden {
+  display: none;
+  transition: 250ms linear ease-in-out;
+}
+
+.refresh_btn,
+.sort_btn {
+  background-color: #222831;
+  border: 1px solid #f8fafc;
+  font-family: "Inter";
+  height: 2rem;
+  width: 5rem;
+  margin-left: 0.5rem;
+  color: #f8fafc;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.sort_btn {
+  width: 3rem;
+}
+
+span {
+  transition: 250ms linear ease-in-out;
+}
+
+.counter_commitments {
+  margin-left: 1rem;
+  font-size: 15px;
+  color: #eab308;
+}
+
+.outcome {
+  width: 3rem;
+  margin-right: -4rem;
+}/*# sourceMappingURL=global.css.map */
