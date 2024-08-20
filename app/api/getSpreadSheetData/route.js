@@ -1,4 +1,4 @@
-import { google } from "googleapis"; // importing the api
+import { google } from "googleapis"; // importing the api from google apis
 export async function GET() {
   const scopes = ["https://www.googleapis.com/auth/spreadsheets.readonly"];
 
